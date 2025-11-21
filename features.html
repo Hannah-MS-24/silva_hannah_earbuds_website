@@ -1,1 +1,100 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- in mobile set initial zoom level of page to 100%, set site size to equal device width not a larger canvas that is shrunk down-->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>Portfolio</title>
+    <!-- Link to reset or normalize before main.css
+    only choose one -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="main-header" class="grid-con">
+      <div
+        class="col-start-1 col-end-2 m-col-start-6 m-col-end-8 l-col-start-6 l-col-end-8"
+        id="logo-con"
+      >
+        <img
+          src="images/earbuds-logo (1).png"
+          alt="logo"
+          id="logo"
+        />
+      </div>
+      <div
+        class="menu-icon-container col-span-4 m-col-start-11 m-col-end-12 l-col-start-11 l-col-end-12"
+      >
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon box" id="menu-button"></label>
+        <nav
+          class="dropdown-menu col-span-4 m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13"
+        >
+          <label for="menu-toggle" class="close-menu">X</label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="#">Features</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="grid-con" id="contact">
+      </div>
+      
+        <div
+        class="col-start-3 col-end-4 m-col-start-9 m-col-end-11 l-col-start-9 l-col-end-11 btn"
+      >
+        <a href="index.html" class="btn-secondary">Home</a>
+      </div>
+
+      <div
+        class="vertical-decor col-span-4 m-col-start-6 m-col-end-7 l-col-start-6 l-col-end-7"
+      >
+        <div class="circle circle-top"></div>
+        <div class="circle circle-middle"></div>
+        <div class="circle circle-bottom"></div>
+      </div>
+    </main>
+
+    <footer class="grid-con">
+      <div class="footer-content col-span-full">
+        <img
+          src="images/earbuds-logo (1).png"
+          alt="logo"
+          class="footer-logo"
+        />
+        <div class="social-icons">
+          <a href="#" aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <p class="col-span-full">
+          &copy; Hannah Melo Motion Design. All works © Hannah Melo. Please do
+          not reproduce without the expressed written consent of myself and
+          clients.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
