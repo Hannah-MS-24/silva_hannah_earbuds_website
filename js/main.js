@@ -33,7 +33,6 @@
       pin: true,
       scrub: 1,
       start: "top top",
-      markers: true,
       end: "+=2000", // Added to provide enough height for the animation to scroll.
     },
     onUpdate: render,
