@@ -1,5 +1,5 @@
 (()=> {
-  console.log("IIFE Called");
+ console.log("IIFE Called");
 
   const canvas = document.querySelector("#earbuds-animation-view");
   const context = canvas.getContext("2d");
