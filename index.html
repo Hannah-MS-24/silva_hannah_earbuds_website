@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- in mobile set initial zoom level of page to 100%, set site size to equal device width not a larger canvas that is shrunk down-->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>Earbuds</title>
+    <!-- Link to reset or normalize before main.css
+    only choose one -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link href="css/grid.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header id="main-header" class="grid-con">
+      <div
+        class="col-start-1 col-end-2 m-col-start-6 m-col-end-8 l-col-start-6 l-col-end-8"
+        id="logo-con"
+      >
+        <img
+          src="images/earbuds-logo (1).png"
+          alt="logo"
+          id="logo"
+        />
+      </div>
+      <div
+        class="menu-icon-container col-span-4 m-col-start-11 m-col-end-12 l-col-start-11 l-col-end-12"
+      >
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon box" id="menu-button"></label>
+        <nav
+          class="dropdown-menu col-span-4 m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13"
+        >
+          <label for="menu-toggle" class="close-menu">X</label>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="grid-con" id="main-content">
+        <div class="col-start-1 col-end-4 m-col-span-full l-col-span-full">
+          <h1>Aurus 3.0</h1>
+          <h2>Simplicity in Design... Power in Sound.</h2>
+          <p>
+            I am a Brazilian motion designer and junior creative developer
+            passionate about bringing visuals to life through animation and
+            interaction. I enjoy exploring how design, movement, and code can
+            come together to create unique digital experiences. My focus is on
+            learning, experimenting, and growing while developing projects that
+            combine creativity and technology. I’m trying to bring life to my
+            thoughts.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-con">
+        <section
+          id="player-container"
+          class="col-span-full m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-12"
+        >
+          <video controls preload="metadata" poster="images/placeholder.png">
+            <source src="videos/Intro.mp4" type="video/mp4" />
+            <source src="videos/Intro-2.webm" type="video/webm" />
+            <p>
+              You are using an older browser that does not support HTML5 Video.
+              Please update your browser.
+            </p>
+          </video>
+          <div class="video-controls hidden" id="video-controls">
+            <button id="play-button">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button id="pause-button">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button id="stop-button">
+              <i class="fa-solid fa-stop"></i>
+            </button>
+            <i class="fa-solid fa-volume-high"></i>
+            <input
+              type="range"
+              id="change-vol"
+              step="0.05"
+              min="0"
+              max="1"
+              value="1"
+            />
+            <button id="full-screen">
+              <i class="fa-solid fa-compress"></i>
+            </button>
+          </div>
+        </section>
+      </div>
+      <div
+        class="col-start-3 col-end-4 m-col-start-9 m-col-end-11 l-col-start-9 l-col-end-11 btn"
+      >
+        <a href="product.html" class="btn-secondary">Product</a>
+      </div>
+
+      <div
+        class="vertical-decor col-span-4 m-col-start-6 m-col-end-7 l-col-start-6 l-col-end-7"
+      >
+        <div class="circle circle-top"></div>
+        <div class="circle circle-middle"></div>
+        <div class="circle circle-bottom"></div>
+      </div>
+    </main>
+
+    <footer class="grid-con">
+      <h2 class="hidden">Footer</h2>
+      <div class="footer-content col-span-full m-col-span-full l-col-span-full">
+        <img
+          src="images/earbuds-logo (1).png"
+          alt="logo"
+          class="footer-logo"
+        />
+        <div class="social-icons">
+          <a href="#" aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <p class="col-span-full">
+          &copy; Hannah Melo Motion Design. All works © Hannah Melo. Please do
+          not reproduce without the expressed written consent of myself and
+          clients.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
