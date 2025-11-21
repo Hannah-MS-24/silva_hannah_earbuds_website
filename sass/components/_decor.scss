@@ -1,1 +1,120 @@
+.vertical-decor {
+  position: relative;
+  width: 4px;
+  height: 120px;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.circle-top {
+  width: 25px;
+  height: 25px;
+  top: -2px;
+  left: -30px;
+}
+
+.circle-middle {
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-80%);
+}
+
+.circle-bottom {
+  width: 15px;
+  height: 15px;
+  bottom: -2px;
+  left: -20px;
+}
+
+/*Tablet*/ 
+
+@media screen and (min-width: 768px) {
+  .vertical-decor {
+  position: relative;
+  width: 4px;
+  height: 200px;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.circle-top {
+  width: 35px;
+  height: 35px;
+  top: -2px;
+  left: -40px;
+}
+
+.circle-middle {
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-80%);
+}
+
+.circle-bottom {
+  width: 20px;
+  height: 20px;
+  bottom: -2px;
+  left: -25px;
+}
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1200px) {
+  .vertical-decor {
+  position: relative;
+  width: 4px;
+  height: 200px;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.circle-top {
+  width: 35px;
+  height: 35px;
+  top: -2px;
+  left: -40px;
+}
+
+.circle-middle {
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-80%);
+}
+
+.circle-bottom {
+  width: 20px;
+  height: 20px;
+  bottom: -2px;
+  left: -25px;
+}
+}
 
