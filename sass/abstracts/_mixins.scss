@@ -1,0 +1,15 @@
+//Mixins
+@mixin borderRad($radius) {
+      border-radius: $radius 0 $radius 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition() {
+  transition: all .5s ease-in-out;
+}
+

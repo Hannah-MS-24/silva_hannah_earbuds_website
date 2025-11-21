@@ -1,1 +1,48 @@
 
+
+a {
+  text-decoration: none !important;
+}
+
+.btn a {
+  display: inline-block;
+  text-align: center;
+  line-height: normal;
+  font-family: "Ropa Sans", sans-serif;
+  font-size: 15px;
+  color: #c9bec9;
+  background-color: #000000;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #c9bec9;
+    color: black;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .btn a {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  .btn {
+    height: 70px;                  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn a {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+}

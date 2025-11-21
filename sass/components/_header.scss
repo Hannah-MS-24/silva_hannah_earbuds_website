@@ -1,1 +1,162 @@
+@use "../abstracts";
 
+body {
+  background-color: #f5e9fc;
+  color: #f5e9fc;
+  font-family: abstracts.$body-font-family;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#main-header {
+  background-color: #f5e9fc;
+  margin-bottom: 20px;
+  position: relative;
+  top: 20px;
+
+  #logo-con {
+    @include abstracts.flex-center;
+  }
+
+  #logo {
+    margin-top: 20px;
+    max-width: 180px;
+    width: 100%;
+  }
+
+  .box {
+    background-color: #c9bed0;
+  }
+
+  .menu-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .menu-icon {
+      margin-top: 10px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #000000;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        width: 20px;
+        height: 20px;
+        background-color: #c9bed0;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      background-color: #f5e9fc;
+      padding: 20px;
+      border-radius: 8px;
+      width: 100px;
+      min-width: 100px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+
+      .close-menu {
+        display: block;
+        text-align: right;
+        font-size: 20px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        color: black;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin: 10px 0;
+
+          a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            transition: color 0.2s;
+
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+
+    input[type="checkbox"]:checked + .menu-icon {
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    input[type="checkbox"]:checked + .menu-icon + .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}
+
+/*Tablet*/
+
+@media screen and (min-width: 768px) {
+  .menu-icon-container .menu-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+
+    &:hover {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  #main-header .menu-icon-container .dropdown-menu {
+    width: 120px;
+    top: 60px;
+    left: -2em;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1200px) {
+  .menu-icon-container .menu-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  #main-header .menu-icon-container .dropdown-menu {
+    width: 200px;
+    top: 60px;
+  }
+}
