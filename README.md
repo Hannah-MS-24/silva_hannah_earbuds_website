@@ -2,6 +2,8 @@
 
 A modern and interactive website presenting the Aurus 3.0 Earbuds, featuring a product animation, image gallery with features, and an x-ray comparison view. Designed with simplicity in mind, the emphasis is on delivering a powerful audio experience through engaging visuals and animations.
 
+![Preview do site](images/readme_image.jpg)
+
 # Installation 🛠️
 
 1- Clone the repository:
