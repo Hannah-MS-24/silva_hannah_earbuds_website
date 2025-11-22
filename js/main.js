@@ -3,6 +3,8 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
+
+  // Variable Declarations
   const canvas = document.querySelector("#earbuds-animation-view");
   const context = canvas.getContext("2d");
 
@@ -16,7 +18,22 @@
   const images = [];
   const buds = { frame: 0 };
 
-  // To load all images
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
+ // Function Definitions
+  
+  function render() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(images[buds.frame], 0, 0);
+  }
+
+  function moveDivisor() {
+    divisor.style.width = `${slider.value}%`;
+  }
+
+
+  // Load Images
   for (let i = 0; i < frameCount; i++) {
     const frameNumber = startFrame + i;
     const img = new Image();
@@ -26,7 +43,11 @@
 
   console.log(images);
 
-  // GSAP with ScrollTrigger
+  images[0].addEventListener("load", render);
+
+ 
+  // GSAP Animations
+  // Scroll-triggered earbuds animation
   gsap.to(buds, {
     frame: frameCount - 1,
     snap: "frame",
@@ -35,36 +56,25 @@
       pin: true,
       scrub: 1,
       start: "top top",
-      //markers: true,
-      end: "+=2000", // Added to provide enough height for the animation to scroll.
+      // markers: true,
+      end: "+=2000",
     },
     onUpdate: render,
   });
 
-  images[0].addEventListener("load", render);
-
-  function render() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(images[buds.frame], 0, 0);
-  }
-
-  //Logo gsap Animation 
-    gsap.fromTo("#logo",
-        { opacity: 0 },   
-        {opacity: 1,    
-         duration: 4,     
-         ease: "power1.out"
-  });
-
-//X-ray Presentation
-  const divisor = document.querySelector("#divisor");
-  const slider = document.querySelector("#slider");
-
-  function moveDivisor() {
-       
-        divisor.style.width = `${slider.value}%`;
+  // Logo fade-in animation
+  gsap.fromTo(
+    "#logo",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 4,
+      ease: "power1.out",
     }
+  );
 
-    slider.addEventListener("input", moveDivisor);
 
+  // Event Listeners
+
+  slider.addEventListener("input", moveDivisor);
 })();
