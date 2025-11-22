@@ -1,5 +1,7 @@
 (()=> {
- console.log("IIFE Called");
+  console.log("IIFE Called");
+
+  gsap.registerPlugin(ScrollTrigger);
 
   const canvas = document.querySelector("#earbuds-animation-view");
   const context = canvas.getContext("2d");
@@ -14,7 +16,7 @@
   const images = [];
   const buds = { frame: 0 };
 
-  // To load all images
+// To load all images
   for (let i = 0; i < frameCount; i++) {
     const frameNumber = startFrame + i;
     const img = new Image();
@@ -24,7 +26,7 @@
 
   console.log(images);
 
-  // GSAP with ScrollTrigger
+// GSAP with ScrollTrigger
   gsap.to(buds, {
     frame: frameCount - 1,
     snap: "frame",
@@ -33,6 +35,7 @@
       pin: true,
       scrub: 1,
       start: "top top",
+      //markers: true,
       end: "+=2000", // Added to provide enough height for the animation to scroll.
     },
     onUpdate: render,
@@ -45,13 +48,24 @@
     context.drawImage(images[buds.frame], 0, 0);
   }
 
-  //Logo gsap Animation 
+//Logo gsap Animation 
     gsap.fromTo("#logo",
         { opacity: 0 },   
         {opacity: 1,    
          duration: 4,     
          ease: "power1.out"
-  }
-);
+  });
+
+//X-ray Presentation
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
+  function moveDivisor() {
+       
+        divisor.style.width = `${slider.value}%`;
+    }
+
+    slider.addEventListener("input", moveDivisor);
+
 
 })();
