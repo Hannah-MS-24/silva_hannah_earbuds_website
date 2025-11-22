@@ -6,6 +6,7 @@ body {
   font-family: abstracts.$body-font-family;
   line-height: 1.6;
   margin: 0;
+  overflow-x: hidden;
 }
 
 #main-header {
@@ -117,6 +118,133 @@ body {
   }
 }
 
+#earbuds-animation-view {
+  width: 100%;      
+  max-width: 1920px; 
+  height: auto;      
+  display: block;
+  margin: 0 auto;
+}
+
+/*Gallery*/
+
+#gallery {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  .image-gallery {
+    text-align: center;
+    padding: 20px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.25s; }
+    &:nth-child(3) { animation-delay: 0.4s; }
+  }
+
+  img {
+  width: 100%;
+  height: 280px; 
+  object-fit: cover; 
+  border-radius: 14px;
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+  h2 {
+    font-size: 1.3rem;
+    margin: 15px 0 8px;
+    font-weight: 600;
+    color: black;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 0.8;
+    color: black;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+/*X-ray Presentation*/
+
+#x-ray-presentation {
+  position: relative;
+  aspect-ratio: 16/10;
+  background-image: url(../images/normal-earbuds0001.jpg);
+  background-size: cover;
+  border-radius: 15px;
+  overflow: hidden; 
+}
+
+#divisor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/xray-earbuds0000.jpg);
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  border-radius: 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #f5e9fc;
+  }
+}
+
+#slider {
+  position: absolute;
+  left: 0 !important;     
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100% !important; 
+  z-index: 20;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+}
+
+#slider::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: #f5e9fc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /*Tablet*/
 
 @media screen and (min-width: 768px) {
@@ -140,6 +268,10 @@ body {
     top: 60px;
     left: -2em;
   }
+
+  #gallery img {
+    height: 320px;
+  }
 }
 
 /* Desktop */
@@ -158,5 +290,9 @@ body {
   #main-header .menu-icon-container .dropdown-menu {
     width: 200px;
     top: 60px;
+  }
+
+  #gallery img {
+    height: 380px;
   }
 }
