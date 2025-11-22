@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <!-- in mobile set initial zoom level of page to 100%, set site size to equal device width not a larger canvas that is shrunk down-->
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -42,39 +42,74 @@
           <label for="menu-toggle" class="close-menu">X</label>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="features.html">Features</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Product</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <section>
       <div class="grid-con" id="main-content">
         <div class="col-start-1 col-end-4 m-col-span-full l-col-span-full">
           <h1>Aurus 3.0</h1>
-          <h2>Simplicity that Amplifies Sound</h2>
+          <h2>Simplicity in Design... Power in Sound.</h2>
           <p>
-            Aurus was born with a clear purpose: to offer sonic power in its purest form.
-            Our earbuds combine minimalist design with advanced technology to deliver clarity, 
-            depth, and impact in every note. No frills, no distractions — just high-quality sound 
-            in a lightweight, comfortable, and intuitive format.
-            
-            Aurus. Where simplicity meets the power of sound.
+            I am a Brazilian motion designer and junior creative developer
+            passionate about bringing visuals to life through animation and
+            interaction. I enjoy exploring how design, movement, and code can
+            come together to create unique digital experiences. My focus is on
+            learning, experimenting, and growing while developing projects that
+            combine creativity and technology. I’m trying to bring life to my
+            thoughts.
           </p>
         </div>
       </div>
 
-      
       <div class="col-span-full">
             <canvas id="earbuds-animation-view"></canvas> 
+        </div>
+
+      <div class="grid-con" id="gallery">
+        <div class="image-gallery col-span-full m-col-span-4 l-col-span-4">
+          <img src="images/ergonomic.jpg" alt="Noise-cancelling Microphone" class="image1" />
+          <div class="image-text1">
+            <h2>Ergonomic and Comfortable Design</h2>
+            <p>Designed to perfectly fit the anatomy of the ear, ensuring stability even during long periods of use.</p>
+          </div>
+        </div>
+
+        <div class="image-gallery col-span-full m-col-span-4 l-col-span-4">
+          <img src="images/earpiece.jpg" alt="Ergonomic Earpieces" class="image2" />
+          <div class="image-text2">
+            <h2>Soft and Adaptable Earpieces</h2>
+            <p>Made of hypoallergenic silicone, they mold to the ear for a light, firm fit without excessive pressure.</p>
+          </div>
+        </div>
+
+        <div class="image-gallery col-span-full m-col-span-4 l-col-span-4">
+          <img src="images/sound.jpg" alt="High Fidelity Sound" class="image3" />
+          <div class="image-text3">
+            <h2>Clear and Balanced Sound</h2>
+            <p>Powerful bass, crisp mids, and defined highs for an immersive experience.</p>
+          </div>
+        </div>
       </div>
-        
+
+      <div class="col-span-full">        
+                <div id="x-ray-presentation">
+                    <div id="divisor"></div>
+                    <input type="range" min="0" max="100" value="50" id="slider">
+                </div>    
+        </div>
+
       <div
         class="col-start-3 col-end-4 m-col-start-9 m-col-end-11 l-col-start-9 l-col-end-11 btn"
       >
-        <a href="product.html" class="btn-secondary">Product</a>
+        <a href="features.html" class="btn-secondary">Features</a>
       </div>
-
+    
+    </section>
       <div
         class="vertical-decor col-span-4 m-col-start-6 m-col-end-7 l-col-start-6 l-col-end-7"
       >
@@ -110,7 +145,6 @@
         </p>
       </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
     <script src="js/main.js"></script>
